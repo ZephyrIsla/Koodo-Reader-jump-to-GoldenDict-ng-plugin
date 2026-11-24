@@ -8,6 +8,8 @@
 所以让AI帮我写了一个跳转插件，结合二者的功能</br></br>
 Koodo Reader本身会拦截非HTTP，goldendict://直接用插件调用查询会被拦截。</br>
 于是链路是：插件写一个 .url 快捷方式 → 让 Koodo 用系统方式“打开”它 → Windows 按 URL 里的 goldendict:// 分发给 GoldenDict</br></br>
+<img width="536" height="80" alt="image" src="https://github.com/user-attachments/assets/0ecea786-7fca-4716-a1d2-05fe812bb5ef" />
+
 ## 操作方式：</br>
 1.下载json文件，用记事本打开，复制全部内容</br>
 2.打开Koodo设置→插件→添加自定义插件→粘贴→确认</br></br>
