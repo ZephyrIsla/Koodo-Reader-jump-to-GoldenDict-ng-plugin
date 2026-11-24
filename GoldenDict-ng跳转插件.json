@@ -1,0 +1,17 @@
+{
+  "identifier": "koodo-to-goldendict",
+  "type": "dictionary",
+  "displayName": "GoldenDict 跳转",
+  "icon": "dict",
+  "version": "1.1.0",
+  "config": {},
+  "langList": [
+    {
+      "lang": "english",
+      "code": "en",
+      "nativeLang": "English"
+    }
+  ],
+  "script": "async function getDictText(text, from, to, axios, t, config) {\n  var w = String(text || \"\").replace(/[\\r\\n]+/g, \" \").trim();\n  var safe = w.replace(/[&<>]/g, function (c) { return { \"&\": \"&amp;\", \"<\": \"&lt;\", \">\": \"&gt;\" }[c]; });\n  try {\n    var api = window.electronAPI;\n    if (!api || !api.fs || !api.invoke) {\n      return \"<p>此插件需要 Koodo 桌面版。</p>\";\n    }\n    var isWin = api.runtime && api.runtime.platform === \"win32\";\n    if (!isWin) {\n      return \"<p>此插件只写了 Windows 的跳转逻辑。</p>\";\n    }\n    var dir = api.path.join(api.os.homedir(), \"AppData\", \"Local\", \"Temp\");\n    var file = api.path.join(dir, \"koodo-goldendict-jump.url\");\n    var url = \"goldendict://\" + encodeURIComponent(w) + \"?target=popup\";\n    api.fs.writeFileSync(file, \"[InternetShortcut]\\r\\nURL=\" + url + \"\\r\\n\", \"utf8\");\n    await api.invoke(\"open-explorer-folder\", { isFolder: true, path: file });\n    return \"<p>已在 GoldenDict 弹窗中打开：\" + safe + \"</p>\";\n  } catch (e) {\n    return \"<p>跳转失败：\" + (e && e.message ? e.message : e) + \"</p>\";\n  }\n}\nwindow.getDictText = getDictText;",
+  "scriptSHA256": "e486a8b27f68a8d93b4e8b31c4c3fd9206d4e808871e6cbbaeb2664a3607cf2d"
+}
