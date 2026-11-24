@@ -2,7 +2,7 @@
 ## Feature:<br/>
 Koodo Reader里选中单词，按“词典”按钮，自动弹出GoldenDict-ng 单词的popout小窗
 ## Why:</br>
-1.Koodo Reader本地词典功能仅支持mdx，会丢掉图片和音频</br>
+1.Koodo Reader本地词典功能仅支持mdx，会丢掉图片和音频（不过不知道把mdx和mdd放在它的dictionary文件夹下可不可以）</br>
 2.Koodo查词窗口样式太丑，没有css渲染</br>
 3.我想保留Koodo查词历史中的句子和章节，以便后续做单词卡用。而这个功能是GoldenDict-ng提供不了的</br>
 所以让AI帮我写了一个跳转插件</br></br>
