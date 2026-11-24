@@ -11,7 +11,7 @@ Koodo Reader本身会拦截非HTTP，goldendict://直接用插件调用查询会
 <img width="536" height="80" alt="image" src="https://github.com/user-attachments/assets/0ecea786-7fca-4716-a1d2-05fe812bb5ef" />
 
 ## 操作方式：</br>
-1.下载json文件，用记事本打开，复制全部内容</br>
+1.直接打开/下载json文件，复制全部内容</br>
 2.打开Koodo设置→插件→添加自定义插件→粘贴→确认</br></br>
 ## 注意事项：
 1.需要Koodo桌面版</br>
