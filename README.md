@@ -1,6 +1,6 @@
 自用Windows跳转插件</br></br>
 ## Feature:<br/>
-Koodo Reader里选中单词，按“词典”按钮，自动弹出GoldenDict-ng 单词的popout小窗
+[Koodo Reader](https://github.com/koodo-reader/koodo-reader)里选中单词，按“词典”按钮，自动弹出[GoldenDict-ng](https://github.com/xiaoyifang/goldendict-ng)单词的popout小窗
 ## Why:</br>
 1.Koodo Reader本地词典功能仅支持mdx，会丢掉图片和音频（不过不知道把mdx和mdd放在它的dictionary文件夹下可不可以）</br>
 2.Koodo查词窗口样式太丑，没有css渲染</br>
